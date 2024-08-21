@@ -1,206 +1,77 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 body{
-    background-color: white;
-    padding: 0;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100vh;
-}
-/* *{
-    /* border: 1px solid red; */
-
-nav{
-    /* text-align: end; */
-    /* right: 0%; */
-    /* margin: 40px; */
-    /* height: 10px; */
-    /* width: 100%; */
-    /* background-color: red; */
-    /* padding-top: 20px; */
-    /* padding: 0px 20px 0 20px; */
-    padding: 15px 20px;
-
-}
-nav ul{
+    background:#0f0f0f;
     margin: 0;
     padding: 0;
-    /* background-color: green; */
-    display: flex;
-    justify-content: flex-end;
+    font-family: 'Poppins',sans-serif;
+    /* display: flex;
+    justify-content: center;
     align-items: center;
-    
-    /* flex-direction: column; */
+    height: 100vh; */
 }
-nav ul li{
-    
-    list-style: none;
-    margin: 0 10px;
-    font-size: 15px;
+.container{
+    background: #0f0f0f;
+    color: white;
+    width: auto;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(12 , 1fr);
+    gap: 10px;
 }
-nav ul li a{
-    color: black;
+.container .box{
+    position: relative;
+    grid-column: span 3;
+    overflow: hidden;
+    /* text-align: center; */
+}
+.container .box img{
+    border-radius: 15px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.container .box .titre{
+    padding: 10px;
+    margin: 0;
+    font-size: 14px;
+}
+.container .box a{
     text-decoration: none;
+    color: white;
 }
-nav ul li a:hover{
-    cursor: pointer;
-    text-decoration: underline;
+.container .box .infos{
+    display: flex;
+    color: rgb(139, 138, 138);
+    column-gap: 10px;
 }
-nav img{
+.container .box .infos:hover{
+    text-decoration: solid;
+    color: white;
+}
+.container .box .titre_vid{
+    text-align: left;
+}
+.container .box .box_thumbnail{
+    position: relative;
+}
+.container .box .box_thumbnail .temps{
+    position: absolute;
+    background: rgb(0, 0, 0,0.5);
+    width: auto;
+    bottom: 4%;
+    right: 3%;
+    padding: 2.5px 5px;
+    border-radius: 4px;
+}
+.container .box .infos .info_profil img{
     border-radius: 50%;
 }
-form{
-    text-align: center;
+.container .box .taille_inf{
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-form img{
-    margin-bottom: 25px;
-}
-form input{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    
-}
-form .suggestion input{
-    background-color: #f8f9fa;
-    border: 1px solid #f8f9fa;
-    margin: 20px 5px;
-    padding: 10px 15px;
-    font-size: 15px;
-    cursor: pointer;
-}
-.suggestion input:hover{
-    box-shadow: 0 1px 1px rgba(0,0,0,.1);
-    border: 1px solid #dadce0;
-}
-.barre{
-    border: 1px solid #ccc;
-    border-radius: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-width:600px; 
-    column-gap: 10px;
-    padding: 0 5px;
-}
-form .barre:hover{
-    /* transform: scale(1.03); */
-    box-shadow: 0 1px 6px rgba(32,33,36,.28);
-}
-.barre span{
-    padding: 0 10px;
     margin: 0;
-    color: #ccc;
-    display: flex;
-    justify-content: space-around;
-    cursor: pointer;
-}
-.barre input{
-    padding: 0;
-    margin: 0;
-    height: 50px;
-    width: 100%;
-    border: none;
-    outline: none;
-}
-.barre .recherche{
-    display: flex;
-    column-gap: 10px;
-    padding: 0 10px;
-}
-.barre .recherche span{
-    margin: 0;
-    padding: 0;
-    background-color: white;
-    border: none;
-    column-gap: 10px;
-    color: black;
-}
-form p a{
-    text-decoration: none;
-}
-form p a:hover{
-    text-decoration: underline;
-}
-.app_btn {
-  border-radius: 50%;
-  transition: all .3s ease-in;
-  cursor: pointer;
-
-}
-.app_btn span{
-    padding: 5px;
-}
-.app_btn:hover{
-    background-color: #ccc;
-}
-.image{
-    /* border-radius: 50%; */
-    transition: all .3s ease-in;
-    cursor: pointer;
-}
-.image img{
-    padding: 5px;
- }
-.image:hover{
-    background-color: #ccc;
-}
-footer ul{
-    list-style: none;
-    display: flex;
-    width: 100%;
-    column-gap: 10px;
-}
-footer .pays_txt{
-    display: flex;
-    background-color: #eeeeee;
-    justify-content: flex-start;
-    border-bottom: 0.5px solid rgb(197, 197, 197);
     font-size: 14px;
 }
-footer .autres{
-    display: flex;
-    background-color: #eeeeee;
-    justify-content: space-between;
-    font-size: 14px;
-    padding: 0;
-}
-footer .autres .utiles{
-    display: flex;
-    justify-content: flex-start;
-    column-gap: 10px;
-}
-footer .autres .utiles ul li{
-    margin: 0px 10px;
-    padding: 10px 0px;
-}
-footer .autres .fonctions{
-    display: flex;
-    justify-content: flex-end;
-    /* margin-left: 600px; */
-}
-footer .autres .fonctions ul{
-    padding: 0;
-    margin-right: 25px;
-}
-footer .autres .fonctions ul li{
-    margin: 0 5px;
-    padding: 5px 0;
-}
-footer ul li a{
-    text-decoration: none;
-    color: black;
-}
-footer ul li a:hover{
-    text-decoration: underline;
-}
-.goxjub{
-    height: 24px;
-    width: 24px;
-    cursor: pointer;
+.container .box .infos p{
+    margin: 0;
 }
